@@ -370,3 +370,258 @@ button.normal {
   font-size: 14px;
   color: #6b7280;
 }
+
+
+/* ========== RESPONSIVE STYLES ========== */
+
+/* Large Laptops and Desktops (1200px and above) */
+@media (min-width: 1200px) {
+  .section-p1 {
+    padding: 40px 100px;
+  }
+  #header {
+    padding: 20px 100px;
+  }
+}
+
+/* Tablets and Small Laptops (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .section-p1 {
+    padding: 40px 60px;
+  }
+  #header {
+    padding: 20px 60px;
+  }
+  #hero {
+    padding: 0 60px;
+  }
+  .product {
+    width: 22%;
+  }
+}
+
+/* Tablets (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .section-p1 {
+    padding: 40px 40px;
+  }
+  #header {
+    padding: 20px 40px;
+  }
+  #hero {
+    padding: 0 40px;
+    height: 70vh;
+    background-position: top 30% right 30%;
+  }
+  h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .product {
+    width: 30%;
+  }
+  #feature {
+    justify-content: center;
+    gap: 20px;
+  }
+  .feature-box {
+    width: 160px;
+  }
+}
+
+/* Large Mobile Devices (576px to 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+  .section-p1 {
+    padding: 40px 20px;
+  }
+  #header {
+    padding: 15px 20px;
+  }
+  #navbar li {
+    padding: 0 12px;
+  }
+  #hero {
+    padding: 0 20px;
+    height: 60vh;
+    background-position: top 30% right 40%;
+  }
+  h1 {
+    font-size: 34px;
+    line-height: 42px;
+  }
+  h2 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .product {
+    width: 45%;
+  }
+  #feature {
+    justify-content: center;
+    gap: 15px;
+  }
+  .feature-box {
+    width: 150px;
+  }
+  #banner h2 {
+    font-size: 24px;
+  }
+}
+
+/* Small Mobile Devices (575px and below) */
+@media (max-width: 575px) {
+  .section-p1 {
+    padding: 30px 15px;
+  }
+  #header {
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  #navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  #navbar li {
+    padding: 0 8px;
+  }
+  #navbar li a {
+    font-size: 14px;
+  }
+  #hero {
+    padding: 0 15px;
+    height: 50vh;
+    background-position: top 30% right 50%;
+    align-items: center;
+    text-align: center;
+  }
+  h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  .product {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+  }
+  .product-container {
+    justify-content: center;
+  }
+  #feature {
+    justify-content: center;
+    gap: 10px;
+  }
+  .feature-box {
+    width: 45%;
+    min-width: 140px;
+    margin: 5px 0;
+  }
+  #banner {
+    height: 30vh;
+    padding: 0 15px;
+  }
+  #banner h2 {
+    font-size: 20px;
+  }
+  #banner h4 {
+    font-size: 14px;
+  }
+  button.normal {
+    padding: 12px 25px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile Menu (Hamburger) - For very small screens */
+@media (max-width: 400px) {
+  #navbar {
+    flex-direction: column;
+    gap: 5px;
+  }
+  #navbar li {
+    padding: 5px 0;
+  }
+  #hero {
+    height: 45vh;
+  }
+  h1 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .feature-box {
+    width: 90%;
+  }
+}
+
+/* Mobile Menu */
+#mobile {
+  display: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+#mobile i {
+  color: #1a1a1a;
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #e3e6f3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+    z-index: 998;
+  }
+
+  #navbar.active {
+    right: 0;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+  }
+
+  #mobile {
+    display: flex;
+  }
+
+  #mobile i {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  /* Close button positioning */
+  #navbar.active #mobile {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+}

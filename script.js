@@ -1,3 +1,24 @@
+// --- Mobile Menu Toggle ---
+const mobile = document.getElementById("mobile");
+const navbar = document.getElementById("navbar");
+const bar = document.getElementById("bar");
+
+if (mobile) {
+  mobile.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+    bar.classList.toggle("fa-times");
+  });
+}
+
+// Close mobile menu when clicking on a link
+const navLinks = document.querySelectorAll("#navbar li a");
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navbar.classList.remove("active");
+    bar.classList.remove("fa-times");
+  });
+});
+
 // --- Features Section ---
 const features = [
   { img: "img/features/f1.png", title: "Free Shipping", bg: "#fddde4" },
