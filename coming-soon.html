@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coming Soon</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- <link rel="stylesheet" href="style1.css"> -->
+  <!-- <link rel="stylesheet" href="style2.css"> -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto Mono", monospace;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0f172a; /* dark navy */
+      color: #e2e8f0;
+      text-align: center;
+      overflow: hidden;
+      flex-direction: column;
+    }
+
+    .container {
+      background: rgba(17, 25, 40, 0.85);
+      padding: 50px 40px;
+      border-radius: 12px;
+      border: 2px solid #334155;
+      box-shadow: 0 0 25px rgba(0, 255, 200, 0.3);
+      max-width: 600px;
+      animation: fadeIn 1.2s ease-in-out;
+      position: relative;
+    }
+
+    .icon {
+      font-size: 5rem;
+      margin-bottom: 20px;
+      color: #38bdf8;
+      animation: spin 6s linear infinite;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 10px 0;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #f8fafc;
+      text-shadow: 0 0 10px #38bdf8;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      color: #94a3b8;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 30px;
+      background: #38bdf8;
+      color: #0f172a;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: 0.3s;
+      text-transform: uppercase;
+    }
+
+    a:hover {
+      background: #0ea5e9;
+      color: white;
+    }
+
+    .disclaimer {
+      margin-top: 25px;
+      font-size: 0.75rem;
+      color: #94a3b8;
+      opacity: 0.7;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon"><i class="fa-solid fa-gear"></i></div>
+    <h1>System Under Construction</h1>
+    <p>We are upgrading our machinery. This section will be available soon.</p>
+    <a href="index.html"><i class="fa-solid fa-house"></i> Back to Home</a>
+    <div class="disclaimer">
+      ⚠️ This page was created with the assistance of AI.
+    </div>
+  </div>
+</body>
+</html>
